@@ -36,9 +36,9 @@ int main()
                 program.window.close();
             } if (event.type == Event::MouseButtonPressed){
                 if(event.key.code == Mouse::Left){
-                    grid[int(event.mouseButton.x/2)][int(event.mouseButton.y/2)] = Creature(0,int(event.mouseButton.x/10),int(event.mouseButton.y/10));
+                    grid[int(event.mouseButton.x/2)][int(event.mouseButton.y/2)] = Creature(0,int(event.mouseButton.x/2),int(event.mouseButton.y/2));
                 } else if (event.key.code == Mouse::Right){
-                    grid[int(event.mouseButton.x/2)][int(event.mouseButton.y/2)] = Creature(1,int(event.mouseButton.x/10),int(event.mouseButton.y/10));
+                    grid[int(event.mouseButton.x/2)][int(event.mouseButton.y/2)] = Creature(1,int(event.mouseButton.x/2),int(event.mouseButton.y/2));
                 }
             } 
         }
@@ -63,7 +63,7 @@ int main()
                             grid[i][j].life = 50;
                         // }
                     } else {
-                        grid[i][j].life+=5;
+                        grid[i][j].life+=10;
                     }                    
                 }
             }
@@ -84,7 +84,7 @@ int main()
                             grid[i][j] = Creature(2,i,j);
                         }
                     }  
-                    grid[i][j].life-=5;                  
+                    grid[i][j].life-=10;                  
                 }
             }
         }
